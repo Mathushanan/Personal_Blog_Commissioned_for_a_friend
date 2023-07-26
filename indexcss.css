@@ -51,20 +51,22 @@ header {
     right: 0;
     z-index: 9999;
     align-items: center;
-    background-color:transparent;
+    background-color:rgba(0, 0, 0, 0.5);
     padding: 22px 25%;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    
     transition: all .45s ease;
 
 
 }
 
 .section {
-    padding: 160px 15% 120px;
+    padding: 150px 15% 120px;
 }
 .home{
    height: 100vh;
-   border:1px solid red;
+   padding: 150px 15% 120px;
+ 
+  
 }
 
 .home-section{
@@ -98,23 +100,36 @@ font-size: 1rem;
 color: #FFFFFF;
 }
 .name{
-    border: 1px solid;
-    
+   
+    text-align: center;
 }
 .name h3{
     font-size: 4rem;
     font-weight:900;
     color: var(--bg-color);
+    margin-top: 1rem;
 }
 .name p{
     font-size:1.5rem;
+    color: var(--bg-color);
   
 }
-
-.home-section .scroll-btn{
+.name span{
+  
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    color: var(--main-color);
+}
+ .scroll-btn{
     text-align: center;
     margin-top: 15rem;
     font-size: 1rem;
+    
+    
+}
+.scroll-btn a:hover{
+   background-color: black;
     
     
 }
@@ -122,23 +137,144 @@ color: #FFFFFF;
     padding-left: .5rem;
 }
 .scroll-btn a{
-    background-color: #0072BB;
-    padding: 0.7rem;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 0.7rem 2rem;
     border-radius: 5px;
     color: #FFFFFF;
+ 
+    
 }
 
+.fa-bars {
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+    text-align: end;
+    color: var(--bg-color);
+    display: none !important;
+    
+}
+
+.fa-xmark:before {
+    content: '\f00d';
+    font-size: 35px;
+    z-index: 1001;
+    cursor: pointer;
+   text-align: end;
+    color: var(--bg-color);
+   
+
+}
+
+.fa-xmark {
+  
+   text-align: end;
+ 
+
+}
+
+.mobile-navlist {
+    border-radius: 5px;
+    margin: 1rem;
+    
+}
+.nav-item.active a{
+    color: var(--main-color);
+   }
 
 
+.about{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.4)), url('eastern.jpg');
+}
 
+.about h3{
+    color: var(--main-color);
+    text-align: center;
+    font-size: 2rem;
+}
+.about p{
+    color: var(--bg-color);
+    margin-top: 7rem;
+}
+.about .scroll-btn{
+    margin-top: 7rem;
+}
 
+.portfolio-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,auto));
+    align-items:center;
+    gap:2.5rem;
+    margin-top:5rem;
+    }
+    .row{
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    }
 
+    iframe{
+        width:100%;
+    }
 
+    .portfolio h3{
+        color: var(--main-color);
+        text-align: center;
+        font-size: 2rem;
+    }
 
+.portfolio{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.4)), url('eastern1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+.portfolio .scroll-btn{
+    margin-top: 5rem;
+}
 
-
-
+footer{
+    
+    display: flex;
+    
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0,0,0, 0.7)), url('footer.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px 15% 50px;
+    
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    
+ 
+}
+.navbar-footer{
+    display: block;
+}
+footer i{
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--bg-color);
+}
+footer i:hover{
+    color: var(--main-color);
+}
+.navbar-footer a:hover{
+    text-decoration: underline;
+    color: var(--main-color);
+}
+.navbar-footer a{
+    color: var(--bg-color);
+}
 
 
 
@@ -151,13 +287,12 @@ color: #FFFFFF;
 @media(max-width:1480px) {
 
     header {
-        padding: 12px 2.5%;
+       
+        padding: 22px 20%;
         transition: .1s;
     }
 
-    section {
-        padding: 110px 3% 60px;
-    }
+ 
 
  
 
@@ -193,26 +328,23 @@ color: #FFFFFF;
 
 @media(max-width:890px) {
 
+    header{
+        padding: 1rem;
+    }
 
  .home-section{
     padding: 0;
-    
     text-align: center;
    
  }
 
- .section{
-    padding: 40px 15px 30px;
-   
-   
- }
+.section{
+    padding: 100px 8% 80px;
+}
+
  .home .name h3{
     font-size: 2rem;
  }
-
- 
-
-
 
     .open-bar {
         display: block !important;
@@ -226,7 +358,7 @@ color: #FFFFFF;
         left: 0;
         display: flex;
         flex-direction: column;
-        background: var(--bg-color);
+        background:rgba(0, 0, 0, 1);
         text-align: center;
         transition: all .45s ease;
 
@@ -243,16 +375,50 @@ color: #FFFFFF;
     .navbar.open {
         top: 100%;
     }
+    .navbar a{
+        font-size: 1rem;
+        color:var(--bg-color);
+        }
 
 
-
-
+  .about{
+    height: 100%;
+  }
+    
+        .about p{
+            color: var(--bg-color);
+            margin-top: 3rem;
+        }
+        .about .scroll-btn{
+            margin-top: 2rem;
+        }
+        .portfolio{
+            height: 100%;
+          }
+            
+                .portfolio p{
+                    color: var(--bg-color);
+                    margin-top: 3rem;
+                }
+                .portfolio .scroll-btn{
+                    margin-top: 2rem;
+                }
 
 
 }
 
 @media(max-width:500px) {
    
+    .home{
+        padding: 20rem 15px 30px;
+       
+       
+     }
+     .home-section .scroll-btn{
+    
+        margin-top: 4rem;
+    
+    }
     .home-section{
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.4)), url('image2.png');
         background-size: cover;
