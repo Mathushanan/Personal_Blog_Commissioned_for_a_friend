@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: #00458B;
+}
+
+:root {
+  /*   (Teal Green)
+    (Olive Green)
+    #A9D96B (Light Lime Green)
+    #F3F7E7 (Pale Yellow)
+    #FFFFFF (White)
+
+    (Bright Blue)
+#89CFF0 (Sky Blue)
+#B3DDF2 (Pale Blue)
+#F0F5F9 (Light Gray Blue)
+#FFFFFF (White)*/
+
+
+    --bg-color: #FFFFFF;
+    --second-bg-color: #202020;
+    --text-color: #0072BB  ;
+    --second-color: #5f5c5c;
+    --main-color:   #76B947;
+    --big-font: 5rem;
+    --h2-font: 2.5rem;
+    --p-font: 1.1rem;
+
+}
+
+body {
+    background-image: -moz-linear-gradient();
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    align-items: center;
+    background-color:transparent;
+    padding: 22px 25%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    transition: all .45s ease;
+
+
+}
+
+.section {
+    padding: 160px 15% 120px;
+}
+.home{
+   height: 100vh;
+   border:1px solid red;
+}
+
+.home-section{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.4)), url('image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  
+    height: 100vh;
+   
+   
+}
+
+header .navbar ul{
+    display: flex;
+    justify-content: space-between;
+ 
+}
+header .navbar{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.navbar a{
+font-size: 1rem;
+color: #FFFFFF;
+}
+.name{
+    border: 1px solid;
+    
+}
+.name h3{
+    font-size: 4rem;
+    font-weight:900;
+    color: var(--bg-color);
+}
+.name p{
+    font-size:1.5rem;
+  
+}
+
+.home-section .scroll-btn{
+    text-align: center;
+    margin-top: 15rem;
+    font-size: 1rem;
+    
+    
+}
+.scroll-btn i{
+    padding-left: .5rem;
+}
+.scroll-btn a{
+    background-color: #0072BB;
+    padding: 0.7rem;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1480px) {
+
+    header {
+        padding: 12px 2.5%;
+        transition: .1s;
+    }
+
+    section {
+        padding: 110px 3% 60px;
+    }
+
+ 
+
+}
+
+@media(max-width:1100px) {
+    :root {
+        --big-font: 4rem;
+        --h2-font: 2.5rem;
+        --p-font: 1rem;
+        transition: .1s;
+    }
+
+  
+}
+
+@media(max-width:920px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+
+
+ 
+}
+
+
+
+
+
+
+
+
+@media(max-width:890px) {
+
+
+ .home-section{
+    padding: 0;
+    
+    text-align: center;
+   
+ }
+
+ .section{
+    padding: 40px 15px 30px;
+   
+   
+ }
+ .home .name h3{
+    font-size: 2rem;
+ }
+
+ 
+
+
+
+    .open-bar {
+        display: block !important;
+
+    }
+
+    .navbar {
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: center;
+        transition: all .45s ease;
+
+    }
+
+    .navbar a {
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45 ease;
+
+    }
+
+    .navbar.open {
+        top: 100%;
+    }
+
+
+
+
+
+
+}
+
+@media(max-width:500px) {
+   
+    .home-section{
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.4)), url('image2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      
+        height: 100vh;
+       
+       
+    }
+   
+
+
+}
+@media(max-width:365px) {
+
+
+
+
+}
+
+@media(max-width:340px) {
+
+    .soft-skills{
+
+
+     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    
+     
+     }
+}
